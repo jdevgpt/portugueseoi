@@ -177,7 +177,6 @@
         <h1>Apuntes de Portugués</h1>
         <h2>Nivel ${nivs.join(" · ")} · Escuela Oficial de Idiomas</h2>
         <p>${sel.size} temas · Portugués europeo<br>${fecha}</p>
-        <p class="pie-imp">JDev</p>
       </section>`;
     }
 

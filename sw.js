@@ -1,6 +1,6 @@
-/* Service worker – Apuntes de Portugués (JDev)
+/* Service worker – Apuntes de Portugués
    Cambia VERSION en cada actualización para que la app avise de la nueva versión. */
-const VERSION = "1.0.0";
+const VERSION = "1.1.0";
 const CACHE = "apuntes-pt-" + VERSION;
 const ARCHIVOS = [
   "./", "index.html", "css/styles.css", "js/app.js",

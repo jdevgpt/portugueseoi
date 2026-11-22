@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Apuntes de Portugués · EOI</title>
 <meta name="description" content="Apuntes de portugués europeo por niveles de la EOI: gramática, léxico y funciones. Elige los temas y descárgalos en PDF.">
-<meta name="theme-color" content="#f07c1a">
+<meta name="theme-color" content="#1d4f91">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -17,20 +17,24 @@
 
 <div class="app">
   <header class="cabecera">
-    <svg class="ilustra" viewBox="0 0 200 160" aria-hidden="true">
-      <path d="M20 40 Q60 25 100 40 L100 140 Q60 125 20 140Z" fill="#fff"/>
-      <path d="M100 40 Q140 25 180 40 L180 140 Q140 125 100 140Z" fill="#fff"/>
-      <rect x="120" y="4" width="74" height="40" rx="12" fill="#fff"/>
-      <path d="M135 44 L130 58 L148 44Z" fill="#fff"/>
+    <svg class="ilustra" viewBox="0 0 200 120" aria-hidden="true" fill="#fff">
+      <path d="M100 2 L100 14" stroke="#fff" stroke-width="3"/><path d="M70 6 L130 6" stroke="#fff" stroke-width="2"/>
+      <rect x="28" y="14" width="150" height="10" rx="4"/>
+      <path d="M22 26 H184 Q190 26 190 34 V88 Q190 94 184 94 H22 Q16 94 16 88 V34 Q16 26 22 26Z"/>
+      <g fill="#143a6e"><rect x="28" y="36" width="22" height="24" rx="3"/><rect x="58" y="36" width="22" height="24" rx="3"/><rect x="88" y="36" width="22" height="24" rx="3"/><rect x="118" y="36" width="22" height="24" rx="3"/><rect x="150" y="36" width="28" height="44" rx="3"/><text x="62" y="78" font-size="12" font-family="Georgia,serif" font-weight="bold" fill="#143a6e">28</text></g>
+      <circle cx="52" cy="100" r="9"/><circle cx="154" cy="100" r="9"/>
+      <rect x="0" y="110" width="200" height="4"/>
     </svg>
     <div class="fila">
       <img class="logo" src="icons/icon-192.png" alt="">
       <div>
         <h1>Apuntes de Portugués</h1>
-        <p>EOI · Portugués europeo · Elige temas y descarga en PDF</p>
+        <p>Olá! · EOI · Portugués europeo · Elige temas y descarga en PDF</p>
       </div>
     </div>
   </header>
+  <div class="friso" aria-hidden="true"></div>
+  <div class="bandera" aria-hidden="true"></div>
 
   <main>
     <nav class="niveles" id="niveles" aria-label="Niveles"></nav>
@@ -80,7 +84,6 @@
 </div>
 
 <div id="impresion"></div>
-<div class="firma">JDev</div>
 
 <script src="data/a1.js"></script>
 <script src="data/a2.js"></script>

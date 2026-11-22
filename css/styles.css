@@ -1,5 +1,5 @@
 :root{
-  --naranja:#f07c1a; --naranja-osc:#c95f08; --naranja-claro:#fff1e4;
+  --naranja:#1d4f91; --naranja-osc:#143a6e; --naranja-claro:#e8eef8;
   --gris-900:#2b2f33; --gris-700:#4a5058; --gris-500:#7d858f; --gris-300:#d5d9de; --gris-100:#f3f4f6;
   --blanco:#fff; --verde:#1f8a5b; --rojo:#c0392b;
   --radio:14px; --sombra:0 2px 10px rgba(0,0,0,.08);
@@ -87,7 +87,7 @@ input[type=checkbox]{width:20px;height:20px;accent-color:var(--naranja);flex:0 0
 .aviso.visible{display:flex}
 
 /* Firma */
-.firma{position:fixed;right:10px;bottom:78px;font-size:.7rem;color:var(--gris-500);opacity:.7;letter-spacing:.05em;z-index:10;pointer-events:none}
+.firma{display:none!important;position:fixed;right:10px;bottom:78px;font-size:.7rem;color:var(--gris-500);opacity:.7;letter-spacing:.05em;z-index:10;pointer-events:none}
 footer.pie{max-width:900px;margin:10px auto 0;padding:0 14px;font-size:.78rem;color:var(--gris-500)}
 
 /* ───────── Impresión / PDF ───────── */
@@ -95,31 +95,72 @@ footer.pie{max-width:900px;margin:10px auto 0;padding:0 14px;font-size:.78rem;co
 @media print{
   @page{size:A4;margin:16mm 15mm 18mm}
   body{background:#fff;padding:0}
-  .app,.barra,.modal,.aviso,.firma{display:none!important}
+  .app,.barra,.modal,.aviso,.firma{display:none!important;display:none!important}
   #impresion{display:block;color:#111}
   #impresion .apunte p,#impresion .apunte li{font-size:11pt}
   #impresion .apunte table{font-size:9.5pt}
   #impresion .apunte table.compacta td,#impresion .apunte table.compacta th{font-size:9pt}
-  #impresion .apunte th{background:#fbe3cc!important}
-  #impresion .apunte .ojo{background:#fff4ea!important}
+  #impresion .apunte th{background:#e8eef8!important}
+  #impresion .apunte .ojo{background:#fbf3e0!important}
   #impresion .apunte .ej{background:#f3f3f3!important}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .portada{height:240mm;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;page-break-after:always}
-  .portada .bandas{width:120mm;height:6mm;background:linear-gradient(90deg,#f07c1a 0 60%,#4a5058 60%);border-radius:3mm;margin:8mm 0}
+  .portada .bandas{width:120mm;height:6mm;background:linear-gradient(90deg,#046a38 0 40%,#da291c 40%);border-radius:3mm;margin:8mm 0}
   .portada h1{font-size:30pt;margin:0}
   .portada h2{font-size:16pt;font-weight:400;margin:4mm 0 0;color:#4a5058}
   .portada p{color:#7d858f}
   .indice{page-break-after:always}
-  .indice h2{border-bottom:2px solid #f07c1a;padding-bottom:2mm}
-  .indice h3{margin:6mm 0 2mm;color:#c95f08;font-size:12pt}
+  .indice h2{border-bottom:2px solid #1d4f91;padding-bottom:2mm}
+  .indice h3{margin:6mm 0 2mm;color:#143a6e;font-size:12pt}
   .indice ol{margin:0;padding-left:8mm;font-size:11pt}
   .tema-imp{break-inside:auto}
   .tema-imp.salto{page-break-before:always}
   .tema-imp:not(.salto){margin-top:10mm}
-  .tema-imp .cab-imp{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #f07c1a;margin-bottom:3mm}
+  .tema-imp .cab-imp{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #1d4f91;margin-bottom:3mm}
   .tema-imp .cab-imp h2{font-size:15pt;margin:0 0 1mm}
   .tema-imp .cab-imp span{font-size:9pt;color:#7d858f;white-space:nowrap;margin-left:4mm}
   .apunte table,.apunte .ej,.apunte .ojo{break-inside:avoid}
   .apunte h4{break-after:avoid}
   .portada .pie-imp{margin-top:30mm;font-size:8pt;color:#b0b5ba}
 }
+
+/* ═════════ Toque portugués: azulejos, elétrico, calçada ═════════ */
+:root{
+  --azul:#1d4f91; --azul-claro:#e8eef8; --verde-pt:#046a38; --rojo-pt:#da291c;
+  --azulejo:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23fdfcf8'/%3E%3Cg fill='none' stroke='%231d4f91' stroke-width='2'%3E%3Ccircle cx='30' cy='30' r='11'/%3E%3Cpath d='M30 0v8M30 52v8M0 30h8M52 30h8'/%3E%3Cpath d='M0 0q15 15 0 30M60 0q-15 15 0 30M0 60q15-15 0-30M60 60q-15-15 0-30'/%3E%3C/g%3E%3Cg fill='%231d4f91'%3E%3Cpath d='M30 19q4 7 0 11q-4-4 0-11zM30 41q4-7 0-11q-4 4 0 11zM19 30q7 4 11 0q-4-4-11 0zM41 30q-7 4-11 0q4-4 11 0z'/%3E%3Ccircle cx='0' cy='0' r='4'/%3E%3Ccircle cx='60' cy='0' r='4'/%3E%3Ccircle cx='0' cy='60' r='4'/%3E%3Ccircle cx='60' cy='60' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  --calcada:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='8' viewBox='0 0 40 8'%3E%3Cpath d='M0 4q10-6 20 0t20 0' fill='none' stroke='%232b2f33' stroke-width='2.2'/%3E%3C/svg%3E");
+}
+body{background-color:#f6f4ee}
+.cabecera h1,.bloque-cab h2,.modal .caja-cab h3,.desc-nivel b{font-family:Georgia,"Times New Roman",serif;letter-spacing:.01em}
+.cabecera h1{font-size:1.45rem}
+.cabecera svg.ilustra{width:190px;right:-6px;bottom:-2px;opacity:.28}
+.friso{height:26px;background:var(--azulejo) 0 0/26px 26px repeat-x;border-bottom:3px solid var(--azul)}
+.bandera{height:5px;background:linear-gradient(90deg,var(--verde-pt) 0 40%,var(--rojo-pt) 40%)}
+.nivel{border-color:var(--azul-claro)}
+.nivel:not(.activo):not(:disabled){color:var(--azul);border-color:#b9c9e4}
+.bloque{border-top:4px solid var(--azul)}
+.bloque-cab{background:linear-gradient(90deg,var(--azul-claro),#fff)}
+.bloque-cab::after{content:"";width:22px;height:22px;border-radius:3px;background:var(--azulejo) center/22px;box-shadow:0 0 0 1px var(--azul)}
+.desc-nivel{border-left:4px solid var(--azul)}
+.apunte h4{font-family:Georgia,serif}
+.apunte th{background:var(--azul-claro)}
+.apunte .ej{border-left-color:var(--azul)}
+.barra{border-top:0}
+.barra::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:var(--calcada) 0 0/40px 8px repeat-x,#f6f4ee}
+.modal .caja-cab{border-bottom:3px solid var(--azul)}
+@media print{
+  body{background:#fff!important}
+  .portada{border:13mm solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--azulejo) 0 0/13mm 13mm border-box;padding:8mm;height:230mm}
+  .portada h1{font-family:Georgia,serif;font-size:32pt;color:#1d4f91}
+  .portada .bandas{background:linear-gradient(90deg,#046a38 0 40%,#da291c 40% 85%,#f2c200 85%)}
+  .indice h2,.tema-imp .cab-imp h2,.apunte h4{font-family:Georgia,serif}
+  .indice h2{border-bottom-color:#1d4f91}
+  .indice h3{color:#1d4f91}
+  .tema-imp .cab-imp{border-bottom:3px solid #1d4f91;box-shadow:0 2px 0 #da291c}
+  #impresion .apunte th{background:#e8eef8!important}
+  #impresion .apunte .ej{border-left-color:#1d4f91}
+}
+
+/* Avisos "Ojo" en amarillo azulejo */
+.apunte .ojo{background:#fbf3e0;border-left-color:#c79a1e}
+.portada .pie-imp{display:none}
