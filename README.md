@@ -6,6 +6,10 @@ Webapp para consultar y descargar en PDF apuntes de **portugués europeo** organ
 - Bloques por nivel: fonética y ortografía, gramática, léxico y vocabulario, funciones comunicativas.
 - Marca los temas que quieras (de uno o varios niveles) y pulsa **Descargar PDF** → «Guardar como PDF» o imprimir.
 - Opciones de PDF: portada, índice y un tema por página.
+- **Tablas de verbos** conjugados por nivel (presente, perfeito, imperfeito, futuro, condicional, imperativo, particípios).
+- **Ejercicios de repaso** generados a partir de los temas marcados, descargables en PDF con las soluciones en una hoja final aparte.
+- **Traductor** español ↔ portugués de Portugal (glosario propio sin conexión + traducción de frases por Internet).
+- **Exámenes oficiales**: modelos de certificación de EOI y CAPLE con audios y soluciones.
 - Instalable desde Chrome y funciona sin conexión. Avisa cuando hay una versión nueva.
 
 ## Estructura
@@ -15,6 +19,10 @@ css/styles.css    estilos (incluye los de impresión/PDF)
 js/app.js         lógica
 data/a1.js        apuntes nivel A1
 data/a2.js        apuntes nivel A2
+data/verbos.js    verbos y tablas conjugadas
+data/glosario.js  glosario del traductor
+data/ejercicios.js banco de ejercicios
+data/examenes.js  enlaces a exámenes oficiales
 sw.js             service worker (offline + actualizaciones)
 manifest.json     instalación como app
 icons/            iconos

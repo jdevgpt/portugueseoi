@@ -1,11 +1,11 @@
 /* Service worker – Apuntes de Portugués
    Estrategia: primero red (siempre lo último publicado) y, sin conexión, la copia guardada.
    Cambia VERSION en cada actualización. */
-const VERSION = "1.2.0";
+const VERSION = "1.3.0";
 const CACHE = "apuntes-pt-" + VERSION;
 const ARCHIVOS = [
   "./", "index.html", "css/styles.css", "js/app.js",
-  "data/a1.js", "data/a2.js", "manifest.json",
+  "data/a1.js", "data/a2.js", "data/verbos.js", "data/glosario.js", "data/ejercicios.js", "data/examenes.js", "manifest.json",
   "icons/icon-192.png", "icons/icon-512.png"
 ];
 

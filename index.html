@@ -9,7 +9,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<link rel="stylesheet" href="css/styles.css?v=1.2.0">
+<link rel="stylesheet" href="css/styles.css?v=1.3.0">
 </head>
 <body>
 
@@ -29,14 +29,22 @@
       <img class="logo" src="icons/icon-192.png" alt="">
       <div>
         <h1>Apuntes de Portugués</h1>
-        <p>Olá! · EOI · Portugués europeo · Elige temas y descarga en PDF</p>
+        <p>Olá! · EOI · Portugués europeo · Apuntes, ejercicios, traductor y exámenes</p>
       </div>
     </div>
   </header>
   <div class="friso" aria-hidden="true"></div>
   <div class="bandera" aria-hidden="true"></div>
 
+  <nav class="pestanas" id="pestanas" aria-label="Secciones">
+    <button data-vista="apuntes" class="activa">📖 Apuntes</button>
+    <button data-vista="ejercicios">✏️ Ejercicios</button>
+    <button data-vista="traductor">🔁 Traductor</button>
+    <button data-vista="examenes">🎓 Exámenes</button>
+  </nav>
+
   <main>
+   <section id="vista-apuntes" class="vista activa">
     <nav class="niveles" id="niveles" aria-label="Niveles"></nav>
     <div class="desc-nivel" id="descNivel"></div>
 
@@ -47,6 +55,51 @@
     </div>
 
     <div id="bloques"></div>
+   </section>
+
+   <section id="vista-ejercicios" class="vista">
+    <div class="tarjeta">
+      <h2 class="tit-seccion">Ejercicios de repaso</h2>
+      <p id="ejInfo" class="peq"></p>
+      <div class="ej-opciones">
+        <label>Preguntas por tema
+          <select id="ejNum"><option>5</option><option selected>8</option><option>10</option><option>12</option></select>
+        </label>
+        <label><input type="checkbox" id="ejMezclar" checked> Orden aleatorio</label>
+      </div>
+      <div class="ej-botones">
+        <button class="btn prim" id="btnEjGenerar">Generar ejercicios</button>
+        <button class="btn" id="btnEjSol" disabled>Ver soluciones</button>
+      </div>
+    </div>
+    <div id="ejPreview"></div>
+   </section>
+
+   <section id="vista-traductor" class="vista">
+    <div class="tarjeta">
+      <h2 class="tit-seccion">Traductor</h2>
+      <div class="direccion">
+        <span id="dirOrigen">Español</span>
+        <button class="btn peq" id="btnSwap" aria-label="Cambiar dirección">⇄</button>
+        <span id="dirDestino">Portugués (PT)</span>
+      </div>
+      <input type="search" id="trTexto" placeholder="Escribe una palabra o expresión…" aria-label="Texto a traducir" autocomplete="off">
+      <div id="trResultados"></div>
+      <div class="tr-online">
+        <button class="btn" id="btnOnline">🌐 Traducir la frase completa (Internet)</button>
+        <div id="trOnline"></div>
+      </div>
+    </div>
+   </section>
+
+   <section id="vista-examenes" class="vista">
+    <div class="tarjeta">
+      <h2 class="tit-seccion">Exámenes oficiales</h2>
+      <p class="peq">Modelos reales de certificación de las EOI y de la Universidad de Lisboa (CAPLE), con soluciones y audios. Se abren en la web oficial (necesitas conexión).</p>
+      <nav class="niveles" id="exNiveles"></nav>
+    </div>
+    <div id="exLista"></div>
+   </section>
   </main>
 
   <footer class="pie">Contenidos elaborados a partir del currículo de las Escuelas Oficiales de Idiomas (portugués europeo, ortografía del Acuerdo de 1990).</footer>
@@ -85,8 +138,12 @@
 
 <div id="impresion"></div>
 
-<script src="data/a1.js?v=1.2.0"></script>
-<script src="data/a2.js?v=1.2.0"></script>
-<script src="js/app.js?v=1.2.0"></script>
+<script src="data/a1.js?v=1.3.0"></script>
+<script src="data/a2.js?v=1.3.0"></script>
+<script src="data/verbos.js?v=1.3.0"></script>
+<script src="data/glosario.js?v=1.3.0"></script>
+<script src="data/ejercicios.js?v=1.3.0"></script>
+<script src="data/examenes.js?v=1.3.0"></script>
+<script src="js/app.js?v=1.3.0"></script>
 </body>
 </html>

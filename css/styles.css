@@ -164,3 +164,67 @@ body{background-color:#f6f4ee}
 /* Avisos "Ojo" en amarillo azulejo */
 .apunte .ojo{background:#fbf3e0;border-left-color:#c79a1e}
 .portada .pie-imp{display:none}
+
+/* ═════════ Pestañas, ejercicios y traductor ═════════ */
+.pestanas{display:flex;background:#fff;box-shadow:var(--sombra);position:sticky;top:0;z-index:15}
+.pestanas button{flex:1;border:0;background:none;padding:12px 6px;font-weight:700;color:var(--gris-500);border-bottom:3px solid transparent;font-size:.92rem}
+.pestanas button.activa{color:var(--azul);border-bottom-color:var(--rojo-pt)}
+.vista{display:none}
+.vista.activa{display:block}
+.tarjeta{background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);padding:14px;margin-bottom:12px;border-top:4px solid var(--azul)}
+.tit-seccion{font-family:Georgia,serif;margin:0 0 6px;font-size:1.15rem;color:var(--azul)}
+.gris{color:var(--gris-500)}
+.ej-opciones{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:10px 0}
+.ej-opciones label{display:flex;gap:8px;align-items:center;font-size:.92rem}
+.ej-opciones select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--gris-300);background:#fff}
+.ej-botones{display:flex;gap:8px;flex-wrap:wrap}
+.btn:disabled{cursor:not-allowed}
+.ejercicios .ej-sec{margin-bottom:14px}
+.ejercicios h3{font-family:Georgia,serif;font-size:1rem;margin:4px 0 2px;color:var(--azul);display:flex;align-items:center;gap:8px}
+.ejercicios h3 small{font-family:system-ui,sans-serif;font-size:.72rem;color:var(--gris-500);font-weight:600;margin-left:auto}
+.ej-num{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:5px;background:var(--azulejo) center/24px;box-shadow:0 0 0 1px var(--azul);color:var(--azul);font-family:system-ui;font-size:.8rem;font-weight:800;text-shadow:0 0 3px #fff,0 0 3px #fff}
+.ej-inst{margin:0 0 6px;font-style:italic;color:var(--gris-700);font-size:.9rem}
+.ejercicios ol{margin:0;padding-left:28px}
+.ejercicios li{padding:5px 0;border-bottom:1px dashed var(--gris-300);font-size:.95rem}
+.hueco{display:inline-block;min-width:90px;border-bottom:1.5px solid var(--gris-700);margin:0 3px;height:1em;vertical-align:baseline}
+.sol{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;background:#e3f2ea;color:var(--verde-pt);font-weight:700;font-size:.88rem}
+.direccion{display:flex;align-items:center;justify-content:center;gap:10px;margin:6px 0 10px;font-weight:700;color:var(--azul)}
+.direccion span{flex:1;text-align:center;background:var(--azul-claro);border-radius:10px;padding:8px 4px}
+#trTexto{width:100%;border:2px solid var(--azul-claro);border-radius:12px;padding:12px;font:inherit;font-size:1.05rem}
+#trTexto:focus{outline:none;border-color:var(--azul)}
+#trResultados{margin-top:10px}
+.tr-item{padding:10px 12px;border-left:4px solid var(--azul);background:#fafbfd;border-radius:0 10px 10px 0;margin-bottom:8px}
+.tr-item.online{border-left-color:var(--verde-pt)}
+.tr-dest{font-weight:700;font-size:1.05rem;color:var(--gris-900)}
+.tr-orig{color:var(--gris-500);font-size:.88rem}
+.tr-nota{font-size:.78rem;color:#8a6d12;margin-top:3px}
+.tr-online{margin-top:12px;border-top:1px solid var(--gris-300);padding-top:12px}
+.tr-online .btn{width:100%}
+.apunte table.verbos td:first-child{white-space:nowrap}
+
+@media print{
+  .hoja-ej .cab-ej{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid #1d4f91;box-shadow:0 2px 0 #da291c;margin-bottom:6mm;padding-bottom:2mm}
+  .hoja-ej h1,.hoja-sol h1{font-family:Georgia,serif;color:#1d4f91;margin:0;font-size:20pt}
+  .hoja-ej .cab-ej p{margin:1mm 0 0;color:#4a5058;font-size:10pt}
+  .fecha-ej{font-size:10pt;color:#4a5058}
+  .hoja-ej .ejercicios li{font-size:11pt;padding:2.2mm 0;break-inside:avoid}
+  .hoja-ej .ej-sec{break-inside:auto}
+  .hoja-ej h3{break-after:avoid}
+  .hoja-ej .hueco{min-width:32mm}
+  .hoja-sol{page-break-before:always}
+  .hoja-sol h1{border-bottom:3px solid #1d4f91;padding-bottom:2mm;margin-bottom:4mm}
+  .cols-sol{column-count:2;column-gap:8mm;font-size:9.5pt}
+  .sol-sec{break-inside:avoid;margin-bottom:3mm}
+  .sol-sec b{color:#1d4f91;font-family:Georgia,serif}
+  .sol-sec ol{margin:1mm 0 0;padding-left:7mm}
+}
+
+/* Exámenes */
+.ex-desc{margin:8px 14px 4px;color:var(--gris-700)}
+.ex-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-top:1px solid var(--gris-100);text-decoration:none;color:var(--gris-900)}
+.ex-item:active,.ex-item:hover{background:var(--azul-claro)}
+.ex-ico{font-size:1.15rem}
+.ex-nom{flex:1;font-size:.93rem}
+.ex-niv{font-size:.72rem;font-weight:800;color:var(--azul);background:var(--azul-claro);border-radius:999px;padding:2px 8px}
+#exNiveles{margin-top:8px;padding-bottom:0}
+@media (max-width:420px){.pestanas button{font-size:.8rem;padding:11px 2px}}
