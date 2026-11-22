@@ -228,3 +228,69 @@ body{background-color:#f6f4ee}
 .ex-niv{font-size:.72rem;font-weight:800;color:var(--azul);background:var(--azul-claro);border-radius:999px;padding:2px 8px}
 #exNiveles{margin-top:8px;padding-bottom:0}
 @media (max-width:420px){.pestanas button{font-size:.8rem;padding:11px 2px}}
+
+/* ═════════ Ajustes: fondo bloqueado y botones geométricos ═════════ */
+body.bloqueado{position:fixed;left:0;right:0;width:100%;overflow:hidden}
+.modal{overscroll-behavior:contain}
+.modal .caja-cuerpo{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+
+/* Botones: misma altura, mismo radio, contenido centrado */
+.btn,.nivel,.tema .ver,.pestanas button,.cerrar{border-radius:10px}
+.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.15;padding:0 14px}
+.btn.peq{min-height:44px;padding:0 10px;font-size:.88rem}
+
+/* Pestañas: 4 columnas iguales */
+.pestanas{display:grid;grid-template-columns:repeat(4,1fr)}
+.pestanas button{border-radius:0;display:flex;align-items:center;justify-content:center;gap:4px;min-height:48px}
+
+/* Niveles: rejilla de casillas iguales */
+.niveles{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;overflow:visible;padding:4px 0 12px}
+#exNiveles{grid-template-columns:repeat(5,1fr);padding:0}
+.nivel{padding:0;min-height:44px;display:flex;align-items:center;justify-content:center;position:relative;border-width:2px}
+.nivel .cuenta{position:absolute;top:-7px;right:-6px;margin:0;min-width:20px;height:20px;line-height:20px;padding:0 5px;border-radius:10px;background:var(--rojo-pt);color:#fff;font-size:.7rem;box-shadow:0 0 0 2px #fff}
+.nivel.activo .cuenta{background:var(--rojo-pt)}
+
+/* Herramientas de apuntes: buscador arriba, 2 botones iguales debajo */
+.herramientas{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.herramientas input[type=search]{grid-column:1/-1;min-height:44px}
+
+/* Filas de temas: checkbox + texto + botón «Ver» de tamaño fijo */
+.tema{min-height:52px}
+.tema .ver{width:60px;height:36px;padding:0;flex:0 0 60px;display:flex;align-items:center;justify-content:center}
+
+/* Barra inferior: texto + 2 botones de ancho fijo */
+.barra .fila{display:grid;grid-template-columns:1fr 96px 170px;gap:8px;align-items:center}
+.barra .btn{width:100%}
+
+/* Ejercicios */
+.ej-opciones{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ej-opciones label{min-height:44px;background:var(--gris-100);border-radius:10px;padding:0 12px}
+.ej-opciones select{margin-left:auto}
+.ej-botones{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ej-botones .btn{width:100%}
+
+/* Traductor */
+.direccion{display:grid;grid-template-columns:1fr 44px 1fr;gap:8px}
+.direccion span{min-height:44px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+#btnSwap{width:44px;height:44px;padding:0;font-size:1.1rem}
+#trTexto{min-height:48px}
+.tr-online .btn{width:100%}
+
+/* Cerrar ventanas: cuadrado */
+.cerrar{width:40px;height:40px;display:flex;align-items:center;justify-content:center;flex:0 0 40px}
+
+@media (max-width:420px){
+  .barra .fila{grid-template-columns:1fr 78px 140px}
+  .barra .info{font-size:.8rem;line-height:1.2}
+  .pestanas button{flex-direction:column;gap:0;font-size:.74rem;min-height:54px}
+  .niveles{gap:6px}
+  .ej-opciones{grid-template-columns:1fr}
+}
+@media (min-width:700px){
+  .herramientas{grid-template-columns:1fr 170px 170px}
+  .herramientas input[type=search]{grid-column:auto}
+  .ej-opciones{grid-template-columns:repeat(2,minmax(0,280px))}
+  .ej-botones{grid-template-columns:repeat(2,minmax(0,220px))}
+  .tr-online .btn{width:auto;min-width:340px}
+}
+@media (min-width:700px){.pestanas{padding:0 max(12px,calc((100% - 900px)/2))}}

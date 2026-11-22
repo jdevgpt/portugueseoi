@@ -133,8 +133,22 @@
     c.scrollTop = 0;
     abrir("#modalLector");
   }
-  function abrir(s) { $(s).classList.add("abierto"); }
-  function cerrar(m) { m.classList.remove("abierto"); }
+  // Bloqueo del fondo mientras hay una ventana abierta (también en iPhone/Android)
+  let scrollGuardado = 0;
+  function bloquearFondo() {
+    if (document.body.classList.contains("bloqueado")) return;
+    scrollGuardado = window.scrollY;
+    document.body.style.top = -scrollGuardado + "px";
+    document.body.classList.add("bloqueado");
+  }
+  function desbloquearFondo() {
+    if (document.querySelector(".modal.abierto")) return;
+    document.body.classList.remove("bloqueado");
+    document.body.style.top = "";
+    window.scrollTo(0, scrollGuardado);
+  }
+  function abrir(s) { $(s).classList.add("abierto"); bloquearFondo(); }
+  function cerrar(m) { m.classList.remove("abierto"); desbloquearFondo(); }
   document.querySelectorAll(".modal").forEach((m) => {
     m.addEventListener("click", (e) => { if (e.target === m || e.target.hasAttribute("data-cerrar")) cerrar(m); });
   });
