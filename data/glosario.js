@@ -451,6 +451,126 @@ hace dos años|há dois anos|a2-narrar
 de repente|de repente|a2-narrar
 al final|afinal / no fim|a2-narrar
 inolvidable|inesquecível|a2-narrar
+alquilar (como inquilino)|arrendar|b1-habitacao
+el alquiler mensual|a renda|b1-habitacao
+la fianza|a caução|b1-habitacao
+el avalista|o fiador|b1-habitacao
+el casero|o senhorio|b1-habitacao
+el inquilino|o inquilino|b1-habitacao
+la comunidad de vecinos|o condomínio|b1-habitacao
+amueblado|mobilado|b1-habitacao
+la hipoteca|o crédito à habitação|b1-habitacao
+la inmobiliaria|a imobiliária|b1-habitacao
+el atasco|o engarrafamento|b1-habitacao
+la hora punta|a hora de ponta|b1-habitacao
+el albañil|o pedreiro|b1-habitacao
+la fuga de agua|a fuga de água|b1-habitacao
+el calentador|o esquentador|b1-habitacao
+el grifo|a torneira|b1-habitacao
+la humedad|a humidade|b1-habitacao
+reformar (una casa)|remodelar|b1-habitacao
+las afueras|os arredores|b1-habitacao
+el paro (desempleo)|o desemprego|b1-trabalho-economia
+las prácticas|o estágio|b1-trabalho-economia
+el becario|o estagiário|b1-trabalho-economia
+la carta de presentación|a carta de motivação|b1-trabalho-economia
+contrato indefinido|contrato sem termo|b1-trabalho-economia
+trabajar como autónomo|trabalhar a recibos verdes|b1-trabalho-economia
+el sueldo neto|o ordenado líquido|b1-trabalho-economia
+la paga extra|o subsídio (de férias / de Natal)|b1-trabalho-economia
+Hacienda|as Finanças|b1-trabalho-economia
+la huelga|a greve|b1-trabalho-economia
+el despido|o despedimento|b1-trabalho-economia
+el teletrabajo|o teletrabalho|b1-trabalho-economia
+ahorrar|poupar|b1-trabalho-economia
+el presupuesto|o orçamento|b1-trabalho-economia
+la deuda|a dívida|b1-trabalho-economia
+el coste de vida|o custo de vida|b1-trabalho-economia
+el cambio climático|as alterações climáticas|b1-ambiente
+la contaminación|a poluição|b1-ambiente
+contaminar|poluir|b1-ambiente
+el contenedor de reciclaje|o ecoponto|b1-ambiente
+los residuos|os resíduos|b1-ambiente
+la sequía|a seca|b1-ambiente
+los incendios forestales|os incêndios florestais|b1-ambiente
+las inundaciones|as cheias|b1-ambiente
+las placas solares|os painéis solares|b1-ambiente
+malgastar|desperdiçar|b1-ambiente
+en peligro de extinción|em vias de extinção|b1-ambiente
+el embalse|a albufeira|b1-ambiente
+el acantilado|a falésia|b1-ambiente
+el arroyo|a ribeira|b1-ambiente
+el titular (prensa)|a manchete|b1-media
+el telediario|o telejornal|b1-media
+el semanario|o semanário|b1-media
+en directo|em direto|b1-media
+los bulos|as notícias falsas|b1-media
+el anuncio|o anúncio|b1-media
+la emisora|a estação de rádio|b1-media
+el seguidor|o seguidor|b1-media
+adelgazar|emagrecer|b1-saude-estilo
+estar en forma|estar em forma|b1-saude-estilo
+el estrés|o stress|b1-saude-estilo
+el insomnio|a insónia|b1-saude-estilo
+el cansancio|o cansaço|b1-saude-estilo
+el análisis de sangre|a análise ao sangue|b1-saude-estilo
+la tensión alta|a tensão alta|b1-saude-estilo
+el seguro médico|o seguro de saúde|b1-saude-estilo
+dejar de fumar|deixar de fumar|b1-saude-estilo
+recetar|receitar|b1-saude-estilo
+llevarse bien con|dar-se bem com|b1-relacoes-sentimentos
+enamorarse de|apaixonar-se por|b1-relacoes-sentimentos
+casarse con|casar com|b1-relacoes-sentimentos
+enfadarse con|zangar-se com|b1-relacoes-sentimentos
+hacer las paces|fazer as pazes|b1-relacoes-sentimentos
+echar de menos|ter saudades de|b1-relacoes-sentimentos
+enfadado|chateado|b1-relacoes-sentimentos
+celoso|ciumento|b1-relacoes-sentimentos
+decepcionado|desiludido|b1-relacoes-sentimentos
+la decepción|a desilusão|b1-relacoes-sentimentos
+estar harto|estar farto|b1-relacoes-sentimentos
+la amistad|a amizade|b1-relacoes-sentimentos
+las fiestas populares de junio|os Santos Populares|b1-cultura
+la verbena|o arraial|b1-cultura
+la Nochebuena (cena)|a Consoada|b1-cultura
+la Revolución de los Claveles|a Revolução dos Cravos|b1-cultura
+la cantante de fado|a fadista|b1-cultura
+la guitarra portuguesa|a guitarra portuguesa|b1-cultura
+los países de lengua portuguesa|a lusofonia / a CPLP|b1-cultura
+el empedrado portugués|a calçada portuguesa|b1-cultura
+la guardería|a creche|b1-educacao
+la escuela infantil|o jardim de infância|b1-educacao
+el grado (universitario)|a licenciatura|b1-educacao
+el doctorado|o doutoramento|b1-educacao
+la selectividad|o exame nacional|b1-educacao
+la nota media|a média|b1-educacao
+sacarse el carné de conducir|tirar a carta|b1-educacao
+estudiar una carrera|tirar um curso|b1-educacao
+la beca|a bolsa de estudo|b1-educacao
+la lista de notas|a pauta|b1-educacao
+tener la mosca detrás de la oreja|estar com a pulga atrás da orelha|b1-expressoes
+tener la sartén por el mango|ter a faca e o queijo na mão|b1-expressoes
+hacer oídos sordos|fazer ouvidos de mercador|b1-expressoes
+irse de la lengua|dar com a língua nos dentes|b1-expressoes
+no tener pelos en la lengua|não ter papas na língua|b1-expressoes
+quedarse con el muerto|ficar com a batata quente|b1-expressoes
+la gota que colma el vaso|a gota de água|b1-expressoes
+quien no arriesga no gana|quem não arrisca não petisca|b1-expressoes
+ahogarse en un vaso de agua|fazer uma tempestade num copo de água|b1-expressoes
+quedarse boquiabierto|ficar de boca aberta|b1-expressoes
+la avería|a avaria|b1-telefone-servicos
+la compañía telefónica|a operadora|b1-telefone-servicos
+la domiciliación bancaria|o débito direto|b1-telefone-servicos
+el periodo de permanencia|o período de fidelização|b1-telefone-servicos
+coger número (turno)|tirar a senha|b1-telefone-servicos
+se ha cortado la llamada|a chamada caiu|b1-telefone-servicos
+aunque (+ subjuntivo)|embora|b1-conectores
+ya que|visto que / já que|b1-conectores
+sin embargo|no entanto / contudo|b1-conectores
+a fin de que|a fim de que|b1-conectores
+ojalá|oxalá / quem me dera|b1-conj-usos
+a lo mejor|se calhar|b1-conselhos-hipoteses
+yo que tú…|se eu fosse a ti…|b1-conselhos-hipoteses
 `.trim().split("\n").map((l) => {
   const [es, pt, tema, nota] = l.split("|");
   return { es: es.trim(), pt: pt.trim(), tema: (tema || "").trim(), nota: (nota || "").trim() };

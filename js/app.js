@@ -2,6 +2,7 @@
   "use strict";
 
   const NIVELES = ["A1", "A2", "B1", "B2", "C1", "C2"];
+  if (window.AMPLIAR) window.AMPLIAR();
   const DATOS = window.APUNTES || {};
   const CLAVE = "apuntesPT.v1";
 
@@ -273,7 +274,12 @@
     "a2-verbos-futcond": { f: (x) => x.nivel === "A1", t: ["fut", "cond"] },
     "a2-verbos-impv": { f: () => true, t: ["impv"] },
     "a2-verbos-part": { f: () => true, t: ["part"] },
-    "a2-verbos-fichas": { f: (x) => x.irregular, t: ["pres", "pps", "imp", "fut", "cond"] }
+    "a2-verbos-fichas": { f: (x) => x.irregular, t: ["pres", "pps", "imp", "fut", "cond"] },
+    "b1-verbos-cpres": { f: () => true, t: ["cpres"] },
+    "b1-verbos-cimp": { f: (x) => x.nivel === "A1", t: ["cimp"] },
+    "b1-verbos-cfut": { f: (x) => x.nivel === "A1", t: ["cfut"] },
+    "b1-verbos-infp": { f: (x) => x.nivel === "A1", t: ["infp", "mqp"] },
+    "b1-verbos-fichas": { f: (x) => x.irregular, t: ["cpres", "cimp", "cfut"] }
   };
   const IMPV_P = ["tu", "você", "vocês"];
 

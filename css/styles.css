@@ -294,3 +294,9 @@ body.bloqueado{position:fixed;left:0;right:0;width:100%;overflow:hidden}
   .tr-online .btn{width:auto;min-width:340px}
 }
 @media (min-width:700px){.pestanas{padding:0 max(12px,calc((100% - 900px)/2))}}
+
+/* Ampliación de apuntes */
+.apunte .ampliacion{margin-top:16px;padding-top:6px;border-top:2px dashed var(--azul-claro)}
+.apunte table.ampl-ej td:first-child{font-style:italic;color:var(--azul);width:55%}
+.apunte table.ampl-ej td{border-left:0;border-right:0}
+.apunte table.ampl-er td s{color:#a23}

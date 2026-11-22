@@ -314,7 +314,173 @@ Agradecimento formal: Agradeço desde ___ a vossa atenção.|já`],
 Pode trazer a ___, por favor? (la carta)|ementa
 A ___, se faz favor. (la cuenta)|conta
 Queria fazer uma ___: o quarto não estava limpo.|reclamação
-Pode dar-me o livro de ___?|reclamações`]
+Pode dar-me o livro de ___?|reclamações`],
+    "a1-quantificadores": ["Completa com muito, pouco, bastante ou demasiado (com a concordância certa).", `
+Há ___ (muchas) pessoas na praia.|muitas
+Ela fala ___ (mucho) bem português.|muito
+Tenho ___ (poco) tempo hoje.|pouco
+Comeste ___ (demasiados) doces.|demasiados
+Vivo ___ (bastante) longe do centro.|bastante
+Ele tem ___ (muchos) amigos.|muitos`],
+    "a2-adverbios": ["Forma o advérbio em -mente ou escolhe o advérbio adequado.", `
+rápido → ___|rapidamente
+fácil → ___|facilmente
+feliz → ___|felizmente
+Fala mais ___, por favor. (despacio)|devagar
+Chegámos muito ___. (temprano)|cedo
+___ toda a gente tem telemóvel. (hoy en día)|Hoje em dia`],
+    "b1-conj-presente": ["Conjuga no presente do conjuntivo.", `
+Espero que tu ___ (estar) bem.|estejas
+Quero que vocês ___ (fazer) silêncio.|façam
+É possível que ela ___ (vir) amanhã.|venha
+Talvez nós ___ (ir) ao cinema.|vamos
+Não acho que ele ___ (saber) a resposta.|saiba
+É preciso que eu ___ (chegar) cedo.|chegue
+Duvido que eles ___ (ter) razão.|tenham
+Peço-lhe que ___ (dar) o recado ao João.|dê
+Oxalá ___ (fazer) bom tempo!|faça
+Convém que tu ___ (começar) já.|comeces`],
+    "b1-conj-usos": ["Indicativo ou conjuntivo? Conjuga o verbo.", `
+Acho que ele ___ (ter) razão.|tem
+Não acho que ele ___ (ter) razão.|tenha
+Embora ___ (estar) cansada, vou sair.|esteja
+Sei que tu ___ (ser) capaz.|és
+Procuro um apartamento que ___ (ter) varanda.|tenha
+Moro num apartamento que ___ (ter) varanda.|tem
+Caso ___ (precisar, tu) de ajuda, liga-me.|precises
+Falo devagar para que me ___ (perceber, vocês).|percebam
+É verdade que ___ (chover) muito aqui.|chove
+É pena que não ___ (poder, tu) vir.|possas`],
+    "b1-conj-imperfeito": ["Conjuga no imperfeito do conjuntivo.", `
+Se eu ___ (ter) tempo, ia contigo.|tivesse
+Se nós ___ (ser) ricos, viajávamos mais.|fôssemos
+Ela pediu-me que ___ (esperar).|esperasse
+Fala como se ___ (saber) tudo.|soubesse
+Quem me dera que tu ___ (estar) aqui!|estivesses
+Se vocês ___ (vir) mais cedo, jantávamos juntos.|viessem
+Queria que ele ___ (dizer) a verdade.|dissesse
+Se eu ___ (poder), mudava de casa.|pudesse`],
+    "b1-conj-futuro": ["Conjuga no futuro do conjuntivo.", `
+Quando tu ___ (chegar), liga-me.|chegares
+Se ___ (fazer) sol, vamos à praia.|fizer
+Assim que eu ___ (saber), digo-te.|souber
+Faz o que ___ (querer, tu).|quiseres
+Quem ___ (ter) dúvidas pode perguntar.|tiver
+Se vocês ___ (ir) ao Porto, visitem a Ribeira.|forem
+Enquanto ele ___ (estar) doente, fica em casa.|estiver
+Quando nós ___ (ver) o filme, comentamos.|virmos
+Se ___ (poder, tu), traz o carregador.|puderes
+Logo que eles ___ (vir), começamos.|vierem`],
+    "b1-infinitivo-pessoal": ["Completa com o infinitivo pessoal.", `
+É melhor tu ___ (sair) já.|saíres
+Comprei bilhetes para nós ___ (ir) ao teatro.|irmos
+Antes de vocês ___ (chegar), arrumei a casa.|chegarem
+Obrigado por ___ (vir, vocês).|virem
+É importante ___ (estudar, tu) todos os dias.|estudares
+Depois de ___ (jantar, nós), fomos passear.|jantarmos
+Ao ___ (entrar, eles), cumprimentaram toda a gente.|entrarem
+Trouxe o livro para tu ___ (ler).|leres`],
+    "b1-mais-que-perfeito": ["Completa com o mais-que-perfeito composto.", `
+Quando cheguei, o filme já ___ (começar).|tinha começado
+Ela disse que ___ (perder) as chaves.|tinha perdido
+Nós nunca ___ (ver) a neve.|tínhamos visto
+Eles já ___ (sair) quando liguei.|tinham saído
+Eu ___ (fazer) o jantar antes de ele chegar.|tinha feito
+Tu já ___ (estar) em Lisboa antes?|tinhas estado`],
+    "b1-condicionais": ["Completa a frase condicional.", `
+Se ___ (chover) amanhã, ficamos em casa.|chover
+Se eu ___ (ser) a ti, aceitava.|fosse
+Se ___ (ter) fome, há sopa.|tiveres
+Se tivesses estudado, ___ (passar).|tinhas passado
+Caso ___ (haver) greve, trabalho de casa.|haja
+Vamos à praia, a não ser que ___ (estar) frio.|esteja
+Se nós ___ (saber), teríamos vindo.|tivéssemos sabido
+Se eu ganhasse a lotaria, ___ (comprar) uma casa.|comprava / compraria`],
+    "b1-passiva": ["Passa para a voz passiva.", `
+Saramago escreveu este livro. → Este livro ___ por Saramago.|foi escrito
+A polícia prendeu o ladrão. → O ladrão ___ pela polícia.|foi preso
+Entregaram a encomenda. → A encomenda ___.|foi entregue
+Vão inaugurar a ponte em maio. → A ponte ___ em maio.|vai ser inaugurada
+Vendem casas. → ___ casas.|Vendem-se
+Fecharam a loja. → A loja está ___.|fechada`],
+    "b1-discurso-indireto": ["Passa para o discurso indireto.", `
+«Estou cansado.» → Ele disse que ___ cansado.|estava
+«Comprei um carro.» → Ela disse que ___ um carro.|tinha comprado
+«Vou sair.» → Ele disse que ___ sair.|ia
+«Onde moras?» → Perguntou-me onde ___.|morava
+«Gostas de fado?» → Perguntou-me ___ gostava de fado.|se
+«Fecha a porta!» → Pediu-me que ___ a porta.|fechasse
+«Amanhã vou a Braga.» → Disse que ___ ia a Braga.|no dia seguinte
+«Este livro é meu.» → Disse que ___ livro era dele.|aquele`],
+    "b1-relativos": ["Completa com o pronome relativo (com preposição, se necessário).", `
+A cidade ___ nasci é pequena.|onde
+O colega ___ trabalho é simpático. (trabajar con)|com quem
+O filme ___ te falei ganhou um prémio. (hablar de)|de que
+A vizinha ___ filho é médico mora no 3.º.|cujo
+Não percebi ___ disseste.|o que
+É a empresa ___ trabalho há anos. (trabajar para)|para a qual
+O autor ___ livros li é angolano.|cujos
+___ chegar primeiro escolhe o lugar.|Quem`],
+    "b1-futuro-condicional-compostos": ["Completa com o futuro ou o condicional composto.", `
+Às oito já ___ (acabar, eu) o trabalho.|terei acabado
+O João não veio. ___ (perder) o autocarro?|Terá perdido
+Eu ___ (ir), mas não sabia da festa.|teria ido
+Segundo a imprensa, o ministro ___ (receber) o dinheiro.|teria recebido`],
+    "b1-gerundio-participio": ["Escolhe a forma correta (estar a + inf., gerúndio ou particípio).", `
+Neste momento estou ___ (trabajando).|a trabalhar
+A situação vai ___ (mejorando) aos poucos.|melhorando
+___ o jantar, fomos passear. (terminada)|Acabado
+Fiquei muito ___ (sorprendido) com a notícia.|surpreendido
+Os convidados foram ___ (llegando).|chegando`],
+    "b1-conectores": ["Escolhe o conector: embora, apesar de, visto que, para que, no entanto, a fim de.", `
+___ esteja frio, vou à praia.|Embora
+___ estar frio, vou à praia.|Apesar de
+O hotel é caro; ___, vale a pena.|no entanto
+___ não há bilhetes, vamos noutro dia.|Visto que
+Explico outra vez ___ percebas.|para que
+Saí cedo ___ apanhar o comboio.|a fim de`],
+    "b1-pronomes-avancado": ["Coloca o pronome corretamente.", `
+(lhe) Eu tinha dito.|Eu tinha-lhe dito.
+(lhe) Não tinha dito.|Não lhe tinha dito.
+(te) Darei amanhã. (mesóclise)|Dar-te-ei amanhã.
+(te) Espero que divirtas.|Espero que te divirtas.
+(o) Vimos ontem.|Vimo-lo ontem.
+(nos) Sentamos na esplanada.|Sentamo-nos na esplanada.`],
+    "b1-formacao-palavras": ["Forma o substantivo.", `
+organizar → a ___|organização
+pagar → o ___|pagamento
+ler → a ___|leitura
+feliz → a ___|felicidade
+triste → a ___|tristeza
+aprender → a ___|aprendizagem
+casar → o ___|casamento
+decidir → a ___|decisão`],
+    "b1-opiniao": ["Completa com a expressão adequada.", `
+___ que tens toda a razão. (opinión positiva)|Acho
+Não me ___ que seja boa ideia.|parece
+Concordo ___ parte, mas…|em
+A meu ___, é uma decisão injusta.|ver
+Por um lado é barato; por ___, é longe.|outro`],
+    "b1-conselhos-hipoteses": ["Completa para dar um conselho ou fazer uma hipótese.", `
+Se eu ___ a ti, falava com ele.|fosse
+___ descansar mais. (deberías)|Devias
+E se ___ (ir, nós) ao Gerês?|fôssemos
+Que tal ___ (jantar, nós) fora?|jantarmos
+Talvez ele ___ (estar) em casa.|esteja
+Ele ___ estar doente. (probabilidad)|deve`],
+    "b1-cartas-formais": ["Escreve a fórmula da carta formal.", `
+Saudação: ___ Senhores,|Exmos.
+Início: Venho por este ___ apresentar uma reclamação.|meio
+Na ___ do anúncio, venho candidatar-me…|sequência
+Pedido: Solicito que me ___ devolvido o dinheiro. (ser)|seja
+Despedida: Com os melhores ___,|cumprimentos`],
+    "b1-narrar-relatar": ["Completa o relato com o tempo adequado.", `
+Era sexta-feira e eu ___ (estar) exausta.|estava
+Quando ___ (chegar) a casa, vi que não tinha as chaves.|cheguei
+Percebi que as ___ (deixar) no escritório.|tinha deixado
+O meu colega disse que ___ (ir) lá buscá-las.|ia
+___ cheguei, começou a chover. (en cuanto)|Mal
+Enquanto ___ (esperar), a vizinha convidou-me para um chá.|esperava`]
   };
 
   const E = {};

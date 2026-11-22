@@ -96,13 +96,36 @@
       const base = t === "ar" ? suaveE(eu) + "e" : eu + "a";
       v.impv = [v.pres[2], base, base + "m"];
     }
+    // ── Tiempos de B1 ──
+    // presente do conjuntivo (a partir de la forma de «você» del imperativo)
+    if (inf === "ir") v.cpres = sp("vá vás vá vamos vão");
+    else if (inf === "dar") v.cpres = sp("dê dês dê demos deem");
+    else {
+      const pc = v.impv[1], vo = pc.slice(-1), stc = pc.slice(0, -1);
+      v.cpres = [stc + vo, stc + vo + "s", stc + vo, stc + vo + "mos", stc + vo + "m"];
+    }
+    // imperfeito e futuro do conjuntivo (a partir de «eles» del perfeito)
+    const b = v.pps[4].replace(/ram$/, "");
+    const ult = b.slice(-1);
+    const ACC = irr.pps ? { a: "á", e: "é", i: "í", o: "ô" } : { a: "á", e: "ê", i: "í", o: "ô" };
+    const bN = ACC[ult] ? b.slice(0, -1) + ACC[ult] : b;
+    v.cimp = [b + "sse", b + "sses", b + "sse", bN + "ssemos", b + "ssem"];
+    const sinAc = (f) => f.replace(/ír$/, "ir").replace(/írmos$/, "irmos");
+    v.cfut = [sinAc(b + "r"), b + "res", sinAc(b + "r"), sinAc(b + "rmos"), b + "rem"];
+    // infinitivo pessoal
+    const ip = inf === "pôr" ? "por" : inf;
+    v.infp = [inf, ip + "es", inf, ip + "mos", ip + "em"];
+    // mais-que-perfeito composto
+    v.mqp = ["tinha", "tinhas", "tinha", "tínhamos", "tinham"].map((a) => a + " " + v.part);
     return { inf: infTxt, es, nivel, irregular: !!(irr.pres || irr.pps), v };
   }
 
   const VERBOS = LISTA.map(conjugar);
   window.VERBOS = { lista: VERBOS, pessoas: PESSOAS, tiempos: {
     pres: "presente", pps: "pretérito perfeito simples", imp: "pretérito imperfeito",
-    fut: "futuro", cond: "condicional", impv: "imperativo", part: "particípio"
+    fut: "futuro", cond: "condicional", impv: "imperativo", part: "particípio",
+    cpres: "presente do conjuntivo", cimp: "imperfeito do conjuntivo", cfut: "futuro do conjuntivo",
+    infp: "infinitivo pessoal", mqp: "mais-que-perfeito composto"
   } };
 
   /* ── Generación de tablas HTML ── */
@@ -176,7 +199,26 @@
       html: `<p>Repasa también la tabla de verbos con preposición de A1.</p><h4>Verbos frecuentes de A2</h4><p>${VERBOS.filter((x) => x.nivel === "A2").map((x) => `<b>${x.inf}</b> (${x.es})`).join(" · ")}</p>` }
   ];
 
+  const fichaB1 = (x) =>
+    `<h4>${x.inf} <span class="peq">(${x.es})</span></h4><table class="compacta verbos"><tr><th></th><th>Pres. conjuntivo</th><th>Imperf. conjuntivo</th><th>Fut. conjuntivo</th><th>Infinitivo pessoal</th></tr>` +
+    PESSOAS.map((p, i) => `<tr><td>${p}</td><td>${x.v.cpres[i]}</td><td>${x.v.cimp[i]}</td><td>${x.v.cfut[i]}</td><td>${x.v.infp[i]}</td></tr>`).join("") + `</table>`;
+  const comunes = VERBOS.filter((x) => x.nivel === "A1");
+  const temasB1 = [
+    { id: "b1-verbos-cpres", titulo: "Presente do conjuntivo: tabla de verbos",
+      html: `<p>Formas precedidas de <i>que</i>: <i>que eu fale, que tu fales…</i></p>` + tablaPersonas(todos, "cpres") },
+    { id: "b1-verbos-cimp", titulo: "Imperfeito do conjuntivo: tabla de verbos",
+      html: `<p>Se forma desde la 3.ª plural del perfeito simples (<i>fizeram → fizesse</i>).</p>` + tablaPersonas(comunes, "cimp") },
+    { id: "b1-verbos-cfut", titulo: "Futuro do conjuntivo: tabla de verbos",
+      html: `<p>Tras <i>se, quando, enquanto, assim que, quem, onde, como…</i> con valor de futuro.</p>` + tablaPersonas(comunes, "cfut") },
+    { id: "b1-verbos-infp", titulo: "Infinitivo pessoal y mais-que-perfeito",
+      html: `<p>El infinitivo pessoal es regular en todos los verbos.</p><h4>Infinitivo pessoal</h4>` + tablaPersonas(comunes.slice(0, 20), "infp") +
+        `<h4>Mais-que-perfeito composto (ter en imperfeito + particípio)</h4>` + tablaPersonas(comunes.slice(0, 20), "mqp") },
+    { id: "b1-verbos-fichas", titulo: "Fichas de verbos irregulares (tiempos de B1)",
+      html: `<p>Los tiempos de conjuntivo y el infinitivo pessoal de los verbos irregulares más importantes.</p>` + irregulares.slice(0, 22).map(fichaB1).join("") }
+  ];
+
   const A = window.APUNTES || {};
   if (A.A1) A.A1.bloques.push({ id: "verbos", titulo: "Verbos conjugados", temas: temasA1 });
   if (A.A2) A.A2.bloques.push({ id: "verbos", titulo: "Verbos conjugados", temas: temasA2 });
+  if (A.B1) A.B1.bloques.push({ id: "verbos", titulo: "Verbos conjugados", temas: temasB1 });
 })();
