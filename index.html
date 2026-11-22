@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Apuntes de Portugués · EOI</title>
+<meta name="description" content="Apuntes de portugués europeo por niveles de la EOI: gramática, léxico y funciones. Elige los temas y descárgalos en PDF.">
+<meta name="theme-color" content="#f07c1a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="aviso" id="aviso">Hay una versión nueva <button class="btn prim peq" id="btnActualizar">Actualizar</button></div>
+
+<div class="app">
+  <header class="cabecera">
+    <svg class="ilustra" viewBox="0 0 200 160" aria-hidden="true">
+      <path d="M20 40 Q60 25 100 40 L100 140 Q60 125 20 140Z" fill="#fff"/>
+      <path d="M100 40 Q140 25 180 40 L180 140 Q140 125 100 140Z" fill="#fff"/>
+      <rect x="120" y="4" width="74" height="40" rx="12" fill="#fff"/>
+      <path d="M135 44 L130 58 L148 44Z" fill="#fff"/>
+    </svg>
+    <div class="fila">
+      <img class="logo" src="icons/icon-192.png" alt="">
+      <div>
+        <h1>Apuntes de Portugués</h1>
+        <p>EOI · Portugués europeo · Elige temas y descarga en PDF</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <nav class="niveles" id="niveles" aria-label="Niveles"></nav>
+    <div class="desc-nivel" id="descNivel"></div>
+
+    <div class="herramientas">
+      <input type="search" id="buscar" placeholder="Buscar tema (p. ej. pronombres, comida…)" aria-label="Buscar tema">
+      <button class="btn peq" id="btnTodo">Marcar nivel</button>
+      <button class="btn peq" id="btnNada">Desmarcar</button>
+    </div>
+
+    <div id="bloques"></div>
+  </main>
+
+  <footer class="pie">Contenidos elaborados a partir del currículo de las Escuelas Oficiales de Idiomas (portugués europeo, ortografía del Acuerdo de 1990).</footer>
+</div>
+
+<div class="barra">
+  <div class="fila">
+    <div class="info"><b id="totalSel">0</b> temas seleccionados</div>
+    <button class="btn peq" id="btnLimpiar" title="Vaciar selección de todos los niveles">Vaciar</button>
+    <button class="btn prim" id="btnPdf">Descargar PDF</button>
+  </div>
+</div>
+
+<!-- Lector de un tema -->
+<div class="modal" id="modalLector" role="dialog" aria-modal="true">
+  <div class="caja">
+    <div class="caja-cab"><h3 id="lectorTitulo"></h3><button class="cerrar" data-cerrar aria-label="Cerrar">✕</button></div>
+    <div class="caja-cuerpo apunte" id="lectorCuerpo"></div>
+  </div>
+</div>
+
+<!-- Opciones de PDF -->
+<div class="modal" id="modalPdf" role="dialog" aria-modal="true">
+  <div class="caja">
+    <div class="caja-cab"><h3>Opciones del PDF</h3><button class="cerrar" data-cerrar aria-label="Cerrar">✕</button></div>
+    <div class="caja-cuerpo opciones">
+      <p id="resumenPdf" class="peq"></p>
+      <label><input type="checkbox" id="optPortada" checked> Incluir portada</label>
+      <label><input type="checkbox" id="optIndice" checked> Incluir índice</label>
+      <label><input type="checkbox" id="optSalto"> Cada tema en una página nueva</label>
+      <p class="peq" style="color:#7d858f">Se abrirá la ventana de impresión: elige <b>«Guardar como PDF»</b> para descargarlo o tu impresora para imprimirlo directamente.</p>
+      <button class="btn prim" id="btnGenerar" style="width:100%">Generar PDF</button>
+    </div>
+  </div>
+</div>
+
+<div id="impresion"></div>
+<div class="firma">JDev</div>
+
+<script src="data/a1.js"></script>
+<script src="data/a2.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+:root{
+  --naranja:#f07c1a; --naranja-osc:#c95f08; --naranja-claro:#fff1e4;
+  --gris-900:#2b2f33; --gris-700:#4a5058; --gris-500:#7d858f; --gris-300:#d5d9de; --gris-100:#f3f4f6;
+  --blanco:#fff; --verde:#1f8a5b; --rojo:#c0392b;
+  --radio:14px; --sombra:0 2px 10px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--gris-100);color:var(--gris-900);line-height:1.45;padding-bottom:96px}
+button{font:inherit;cursor:pointer}
+
+/* Cabecera */
+.cabecera{background:linear-gradient(135deg,var(--naranja) 0%,var(--naranja-osc) 100%);color:#fff;padding:18px 16px 22px;position:relative;overflow:hidden}
+.cabecera .fila{display:flex;align-items:center;gap:12px;max-width:900px;margin:0 auto;position:relative;z-index:1}
+.cabecera img.logo{width:52px;height:52px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.2);background:#fff}
+.cabecera h1{margin:0;font-size:1.3rem;line-height:1.15}
+.cabecera p{margin:2px 0 0;font-size:.88rem;opacity:.92}
+.cabecera svg.ilustra{position:absolute;right:-10px;bottom:-14px;width:170px;opacity:.22;z-index:0}
+
+main{max-width:900px;margin:0 auto;padding:14px 12px}
+
+/* Niveles */
+.niveles{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:none}
+.niveles::-webkit-scrollbar{display:none}
+.nivel{flex:0 0 auto;border:2px solid var(--gris-300);background:#fff;color:var(--gris-700);border-radius:999px;padding:8px 16px;font-weight:700;position:relative}
+.nivel.activo{background:var(--naranja);border-color:var(--naranja);color:#fff}
+.nivel:disabled{opacity:.45;cursor:not-allowed}
+.nivel .cuenta{display:inline-block;min-width:20px;margin-left:6px;padding:0 6px;border-radius:999px;background:var(--naranja-claro);color:var(--naranja-osc);font-size:.75rem}
+.nivel.activo .cuenta{background:#fff}
+
+.desc-nivel{background:#fff;border-radius:var(--radio);padding:12px 14px;box-shadow:var(--sombra);margin-bottom:12px;font-size:.92rem;color:var(--gris-700)}
+.desc-nivel b{color:var(--gris-900)}
+
+/* Herramientas */
+.herramientas{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.herramientas input[type=search]{flex:1 1 200px;border:1px solid var(--gris-300);border-radius:10px;padding:10px 12px;font:inherit;background:#fff}
+.btn{border:0;border-radius:10px;padding:10px 14px;font-weight:600;background:#fff;color:var(--gris-700);box-shadow:var(--sombra)}
+.btn:active{transform:translateY(1px)}
+.btn.prim{background:var(--naranja);color:#fff}
+.btn.sec{background:var(--gris-900);color:#fff}
+.btn.peq{padding:7px 10px;font-size:.85rem}
+
+/* Bloques */
+.bloque{background:#fff;border-radius:var(--radio);box-shadow:var(--sombra);margin-bottom:12px;overflow:hidden}
+.bloque-cab{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--gris-100);background:linear-gradient(90deg,var(--naranja-claro),#fff)}
+.bloque-cab h2{margin:0;font-size:1rem;flex:1}
+.bloque-cab .n{font-size:.8rem;color:var(--gris-500)}
+.tema{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--gris-100)}
+.tema:last-child{border-bottom:0}
+.tema label{flex:1;cursor:pointer}
+.tema .ver{background:none;border:1px solid var(--gris-300);border-radius:8px;padding:5px 9px;color:var(--gris-700);font-size:.8rem}
+input[type=checkbox]{width:20px;height:20px;accent-color:var(--naranja);flex:0 0 auto}
+.vacio{padding:20px;text-align:center;color:var(--gris-500)}
+
+/* Barra inferior */
+.barra{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:3px solid var(--naranja);box-shadow:0 -2px 12px rgba(0,0,0,.1);padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:20}
+.barra .fila{max-width:900px;margin:0 auto;display:flex;gap:8px;align-items:center}
+.barra .info{flex:1;font-size:.9rem;color:var(--gris-700)}
+.barra .info b{color:var(--naranja-osc);font-size:1.1rem}
+
+/* Modal lector */
+.modal{position:fixed;inset:0;background:rgba(30,30,30,.55);display:none;z-index:40;align-items:flex-end;justify-content:center}
+.modal.abierto{display:flex}
+.modal .caja{background:#fff;width:100%;max-width:820px;max-height:92vh;border-radius:18px 18px 0 0;display:flex;flex-direction:column}
+@media(min-width:700px){.modal{align-items:center}.modal .caja{border-radius:18px}}
+.modal .caja-cab{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--gris-300)}
+.modal .caja-cab h3{margin:0;flex:1;font-size:1.05rem}
+.modal .caja-cuerpo{overflow:auto;padding:4px 16px 18px}
+.modal .opciones label{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--gris-100)}
+.cerrar{background:var(--gris-100);border:0;border-radius:50%;width:34px;height:34px;font-size:1.1rem}
+
+/* Contenido de apuntes (pantalla y PDF) */
+.apunte h4{color:var(--naranja-osc);margin:16px 0 6px;font-size:1rem}
+.apunte p,.apunte li{font-size:.95rem}
+.apunte ul,.apunte ol{padding-left:20px}
+.apunte table{border-collapse:collapse;width:100%;margin:8px 0 10px;font-size:.88rem}
+.apunte th,.apunte td{border:1px solid var(--gris-300);padding:5px 7px;text-align:left;vertical-align:top}
+.apunte th{background:var(--naranja-claro);color:var(--gris-900)}
+.apunte table.compacta td,.apunte table.compacta th{padding:3px 5px;font-size:.82rem}
+.apunte .ej{background:#f6f7f9;border-left:4px solid var(--gris-500);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0;font-style:italic}
+.apunte .ojo{background:var(--naranja-claro);border-left:4px solid var(--naranja);padding:8px 12px;margin:10px 0;border-radius:0 8px 8px 0}
+.apunte .peq{font-size:.84rem;color:var(--gris-700)}
+.tabla-scroll{overflow-x:auto}
+
+/* Aviso de actualización */
+.aviso{position:fixed;top:10px;left:50%;transform:translateX(-50%);background:var(--gris-900);color:#fff;padding:10px 14px;border-radius:12px;display:none;gap:10px;align-items:center;z-index:60;box-shadow:0 4px 16px rgba(0,0,0,.25);font-size:.9rem;width:max-content;max-width:94vw}
+.aviso.visible{display:flex}
+
+/* Firma */
+.firma{position:fixed;right:10px;bottom:78px;font-size:.7rem;color:var(--gris-500);opacity:.7;letter-spacing:.05em;z-index:10;pointer-events:none}
+footer.pie{max-width:900px;margin:10px auto 0;padding:0 14px;font-size:.78rem;color:var(--gris-500)}
+
+/* ───────── Impresión / PDF ───────── */
+#impresion{display:none}
+@media print{
+  @page{size:A4;margin:16mm 15mm 18mm}
+  body{background:#fff;padding:0}
+  .app,.barra,.modal,.aviso,.firma{display:none!important}
+  #impresion{display:block;color:#111}
+  #impresion .apunte p,#impresion .apunte li{font-size:11pt}
+  #impresion .apunte table{font-size:9.5pt}
+  #impresion .apunte table.compacta td,#impresion .apunte table.compacta th{font-size:9pt}
+  #impresion .apunte th{background:#fbe3cc!important}
+  #impresion .apunte .ojo{background:#fff4ea!important}
+  #impresion .apunte .ej{background:#f3f3f3!important}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .portada{height:240mm;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;page-break-after:always}
+  .portada .bandas{width:120mm;height:6mm;background:linear-gradient(90deg,#f07c1a 0 60%,#4a5058 60%);border-radius:3mm;margin:8mm 0}
+  .portada h1{font-size:30pt;margin:0}
+  .portada h2{font-size:16pt;font-weight:400;margin:4mm 0 0;color:#4a5058}
+  .portada p{color:#7d858f}
+  .indice{page-break-after:always}
+  .indice h2{border-bottom:2px solid #f07c1a;padding-bottom:2mm}
+  .indice h3{margin:6mm 0 2mm;color:#c95f08;font-size:12pt}
+  .indice ol{margin:0;padding-left:8mm;font-size:11pt}
+  .tema-imp{break-inside:auto}
+  .tema-imp.salto{page-break-before:always}
+  .tema-imp:not(.salto){margin-top:10mm}
+  .tema-imp .cab-imp{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #f07c1a;margin-bottom:3mm}
+  .tema-imp .cab-imp h2{font-size:15pt;margin:0 0 1mm}
+  .tema-imp .cab-imp span{font-size:9pt;color:#7d858f;white-space:nowrap;margin-left:4mm}
+  .apunte table,.apunte .ej,.apunte .ojo{break-inside:avoid}
+  .apunte h4{break-after:avoid}
+  .portada .pie-imp{margin-top:30mm;font-size:8pt;color:#b0b5ba}
+}
